@@ -16,20 +16,20 @@ const HeroSection = () => {
           className="col-span-8 place-self-center text-center sm:text-left justify-self-start"
         >
           <h1 className="text-white mb-4 text-4xl sm:text-5xl lg:text-8xl lg:leading-normal font-extrabold">
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#6EE7B7] to-secondary-300">
-                Hello, I&apos;m{" "}
-              </span>
-              <br />
-              <TypeAnimation
-                sequence={["Amitesh", 1000,"Full Stack Dev..", 1000]}
-                wrapper="span"
-                speed={50}
-                repeat={Infinity}
-              />
-            </h1>
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#6EE7B7] to-secondary-300">
+              Hello, I&apos;m{" "}
+            </span>
+            <br />
+            <TypeAnimation
+              sequence={["Amitesh", 1000, "Full Stack Dev..", 1000]}
+              wrapper="span"
+              speed={50}
+              repeat={Infinity}
+            />
+          </h1>
 
           <p className="text-[#A0AEC0] text-base sm:text-lg mb-6 lg:text-xl">
-            I'm a passionate full stack developer specializing in building modern, scalable web applications using technologies like Next.js, Node.js, and MongoDB. I love crafting seamless user experiences and solving real-world problems with clean, efficient code.
+            I&apos;m a passionate full stack developer specializing in building modern, scalable web applications using technologies like Next.js, Node.js, and MongoDB. I love crafting seamless user experiences and solving real-world problems with clean, efficient code.
           </p>
 
           <div>
