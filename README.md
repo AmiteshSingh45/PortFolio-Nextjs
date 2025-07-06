@@ -22,6 +22,4 @@ A fast and responsive portfolio website built with Next.js, showcasing my projec
 - TypeScript
 - **Nodemailer** (for form submissions)
 
-## License
 
-MIT License
