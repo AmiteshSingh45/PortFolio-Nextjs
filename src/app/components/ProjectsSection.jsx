@@ -8,7 +8,7 @@ const projectsData = [
   {
     id: 1,
     title: "React Portfolio Website",
-    description: "Project 1 description",
+    description: "A fast and responsive portfolio website built with Next.js, showcasing my projects, skills, and experience in a clean and modern UI. It includes a contact form that uses Nodemailer to send responses via form submission.",
     image: "/images/projects/1.png",
     tag: ["All", "Web"],
     gitUrl: "/",
@@ -16,50 +16,23 @@ const projectsData = [
   },
   {
     id: 2,
-    title: "Potography Portfolio Website",
-    description: "Project 2 description",
+    title: "Cupcakery Website",
+    description: "Bindi Cupcakery is a full-stack bakery website built with Next.js, Node.js, Express, and MongoDB. It features a modern UI with Tailwind CSS, user authentication, order management, real-time order tracking via Twilio, and a seamless experience for browsing, reviewing, and ordering cupcakes.",
     image: "/images/projects/2.png",
     tag: ["All", "Web"],
-    gitUrl: "/",
+    gitUrl: "/https://github.com/AmiteshSingh45/Cupcakery",
     previewUrl: "/",
   },
   {
     id: 3,
-    title: "E-commerce Application",
-    description: "Project 3 description",
+    title: "E-commerce Application - PowerPlayMart",
+    description: "PowerPlay Mart is a full-featured e-commerce application for sports equipment, built using the MERN stack (MongoDB, Express, React, Node.js). It includes user authentication, product management, secure checkout, order tracking, and an intuitive UI for a smooth online shopping experience.",
     image: "/images/projects/3.png",
     tag: ["All", "Web"],
-    gitUrl: "/",
+    gitUrl: "https://github.com/AmiteshSingh45/Powerplay-Mart",
     previewUrl: "/",
   },
-  {
-    id: 4,
-    title: "Food Ordering Application",
-    description: "Project 4 description",
-    image: "/images/projects/4.png",
-    tag: ["All", "Mobile"],
-    gitUrl: "/",
-    previewUrl: "/",
-  },
-  {
-    id: 5,
-    title: "React Firebase Template",
-    description: "Authentication and CRUD operations",
-    image: "/images/projects/5.png",
-    tag: ["All", "Web"],
-    gitUrl: "/",
-    previewUrl: "/",
-  },
-  {
-    id: 6,
-    title: "Full-stack Roadmap",
-    description: "Project 5 description",
-    image: "/images/projects/6.png",
-    tag: ["All", "Web"],
-    gitUrl: "/",
-    previewUrl: "/",
-  },
-];
+]
 
 const ProjectsSection = () => {
   const [tag, setTag] = useState("All");
