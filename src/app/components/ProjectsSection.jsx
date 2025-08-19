@@ -11,8 +11,8 @@ const projectsData = [
     description: "A fast and responsive portfolio website built with Next.js, showcasing my projects, skills, and experience in a clean and modern UI. It includes a contact form that uses Nodemailer to send responses via form submission.",
     image: "/images/projects/1.png",
     tag: ["All", "Web"],
-    gitUrl: "/",
-    previewUrl: "/",
+    gitUrl: "/https://github.com/AmiteshSingh45/PortFolio-Nextjs",
+    previewUrl: "/https://amitesh-lyart.vercel.app/",
   },
   {
     id: 2,
@@ -21,7 +21,7 @@ const projectsData = [
     image: "/images/projects/2.png",
     tag: ["All", "Web"],
     gitUrl: "/https://github.com/AmiteshSingh45/Cupcakery",
-    previewUrl: "/",
+    previewUrl: "/https://cupcakery.vercel.app/",
   },
   {
     id: 3,
