@@ -11,8 +11,8 @@ const projectsData = [
     description: "A fast and responsive portfolio website built with Next.js, showcasing my projects, skills, and experience in a clean and modern UI. It includes a contact form that uses Nodemailer to send responses via form submission.",
     image: "/images/projects/1.png",
     tag: ["All", "Web"],
-    gitUrl: "/https://github.com/AmiteshSingh45/PortFolio-Nextjs",
-    previewUrl: "/https://amitesh-lyart.vercel.app/",
+    gitUrl: "https://github.com/AmiteshSingh45/PortFolio-Nextjs",
+    previewUrl: "https://amitesh-lyart.vercel.app/",
   },
   {
     id: 2,
@@ -20,8 +20,8 @@ const projectsData = [
     description: "Bindi Cupcakery is a full-stack bakery website built with Next.js, Node.js, Express, and MongoDB. It features a modern UI with Tailwind CSS, user authentication, order management, real-time order tracking via Twilio, and a seamless experience for browsing, reviewing, and ordering cupcakes.",
     image: "/images/projects/2.png",
     tag: ["All", "Web"],
-    gitUrl: "/https://github.com/AmiteshSingh45/Cupcakery",
-    previewUrl: "/https://cupcakery.vercel.app/",
+    gitUrl: "https://github.com/AmiteshSingh45/Cupcakery",
+    previewUrl: "https://cupcakery.vercel.app/",
   },
   {
     id: 3,
