@@ -29,7 +29,8 @@ const TAB_DATA = [
     content: (
       <ul className="list-disc pl-2 space-y-1">
         <li>Sardar Vallabhbhai National Institute of Technology, Surat, Gujarat (2023–2027)</li>
-        <li>B. L. Indo-Anglian Public School, Aurangabad, Bihar</li>
+        <li>Sachchidanand Sinha College, Ramdih, Aurangabad, Bihar (2021–23)</li>
+        <li>B. L. Indo-Anglian Public School, Aurangabad, Bihar 2021</li>
       </ul>
     ),
   },
@@ -38,11 +39,11 @@ const TAB_DATA = [
     id: "leetcode",
     content: (
       <ul className="list-disc pl-2 space-y-1">
-        <li>Solved 300+ problems on LeetCode</li>
+        <li>Solved 325+ problems on LeetCode</li>
         <li>Earned many achievement badges</li>
-        <li>Current rating: 1551</li>
+        <li>Current rating: 1490</li>
         <li>
-          Profile:{" "}
+          Profile:{""}
           <a
             href="https://leetcode.com/u/Amitesh_/"
             target="_blank"

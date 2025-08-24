@@ -30,7 +30,16 @@ const projectsData = [
     image: "/images/projects/3.png",
     tag: ["All", "Web"],
     gitUrl: "https://github.com/AmiteshSingh45/Powerplay-Mart",
-    previewUrl: "/",
+    previewUrl: "/"
+  },
+  {
+    id: 4,
+    title: "Color Detection Robot",
+    description: "This project is a Color Detection Robot that uses an IP camera for image capture, removes the background using AI, detects the dominant color (Red, Yellow, or Blue), and sends a signal to an Arduino Uno to perform robotic actions like sorting..",
+    image: "/images/projects/colorDetectionRobo.jpg",
+    tag: ["All", "Web"],
+    gitUrl: "https://github.com/AmiteshSingh45/colors-detection",
+    previewUrl: "http://youtube.com/watch?v=AUOujnUSj4w&feature=youtu.be",
   },
 ]
 
