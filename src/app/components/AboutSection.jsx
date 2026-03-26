@@ -8,19 +8,57 @@ const TAB_DATA = [
     title: "Skills",
     id: "skills",
     content: (
-      <ul className="list-disc pl-2 space-y-1">
-        <li>Node.js</li>
-        <li>Express</li>
-        <li>PostgreSQL</li>
-        <li>MongoDB</li>
-        <li>JavaScript</li>
-        <li>React</li>
-        <li>Next.js</li>
-        <li>SQL</li>
-        <li>C</li>
-        <li>C++</li>
-        <li>Python</li>
-      </ul>
+      <div className="space-y-6">
+
+        {/* Development */}
+        <div>
+          <h3 className="text-lg font-semibold mb-2">💻 Development</h3>
+          <div className="flex flex-wrap gap-2">
+            {["Node.js","Express","React","Next.js","JavaScript"].map((skill) => (
+              <span key={skill} className="px-3 py-1 bg-gray-800 text-white rounded-full text-sm hover:bg-indigo-600 transition">
+                {skill}
+              </span>
+            ))}
+          </div>
+        </div>
+
+        {/* Data Science & ML */}
+        <div>
+          <h3 className="text-lg font-semibold mb-2">🧠 Data Science & ML</h3>
+          <div className="flex flex-wrap gap-2">
+            {["Machine Learning","Data Science","Scikit-learn","XGBoost","Pandas","NumPy","Data Analysis","Data Visualization"].map((skill) => (
+              <span key={skill} className="px-3 py-1 bg-gray-800 text-white rounded-full text-sm hover:bg-indigo-600 transition">
+                {skill}
+              </span>
+            ))}
+          </div>
+        </div>
+
+        {/* Databases */}
+        <div>
+          <h3 className="text-lg font-semibold mb-2">🗄️ Databases</h3>
+          <div className="flex flex-wrap gap-2">
+            {["MongoDB","PostgreSQL","SQL"].map((skill) => (
+              <span key={skill} className="px-3 py-1 bg-gray-800 text-white rounded-full text-sm hover:bg-indigo-600 transition">
+                {skill}
+              </span>
+            ))}
+          </div>
+        </div>
+
+        {/* Languages */}
+        <div>
+          <h3 className="text-lg font-semibold mb-2">⚙️ Languages</h3>
+          <div className="flex flex-wrap gap-2">
+            {["C","C++","Python"].map((skill) => (
+              <span key={skill} className="px-3 py-1 bg-gray-800 text-white rounded-full text-sm hover:bg-indigo-600 transition">
+                {skill}
+              </span>
+            ))}
+          </div>
+        </div>
+
+      </div>
     ),
   },
   {
@@ -39,11 +77,11 @@ const TAB_DATA = [
     id: "leetcode",
     content: (
       <ul className="list-disc pl-2 space-y-1">
-        <li>Solved 325+ problems on LeetCode</li>
-        <li>Earned many achievement badges</li>
-        <li>Current rating: 1490</li>
+        <li>Solved 450+ problems on LeetCode</li>
+        <li>Earned multiple achievement badges</li>
+        <li>Current rating: 1551</li>
         <li>
-          Profile:{""}
+          Profile:{" "}
           <a
             href="https://leetcode.com/u/Amitesh_/"
             target="_blank"
@@ -80,7 +118,7 @@ const AboutSection = () => {
         <div className="mt-4 md:mt-0 text-left flex flex-col h-full">
           <h2 className="text-4xl font-bold text-white mb-4">About Me</h2>
           <p className="text-base lg:text-lg">
-            I&apos;m a curious and driven developer who loves turning real-world challenges into functional, elegant code. With hands-on experience in building full-stack applications using JavaScript, React, Next.js, Node.js, MongoDB, and PostgreSQL, I enjoy crafting clean and user-friendly solutions. I&apos;ve solved over 300 problems on LeetCode, sharpening my algorithmic thinking, and regularly participate in Codeforces contests to push my limits in competitive programming. I&apos;m passionate about building performant web applications and constantly exploring new tools and technologies to create meaningful digital experiences.
+            I&apos;m a curious and driven developer who loves turning real-world challenges into functional, elegant code. With hands-on experience in building full-stack applications using JavaScript, React, Next.js, Node.js, MongoDB, and PostgreSQL, I enjoy crafting clean and user-friendly solutions. I&apos;ve solved over 450 problems on LeetCode and 100+ problems on GeeksforGeeks, sharpening my algorithmic thinking and problem-solving skills. I&apos;m also a passionate Data Science and Machine Learning enthusiast, with experience in building predictive models and working with real-world datasets. I&apos;m passionate about building performant web applications and leveraging data-driven approaches to create meaningful digital experiences.
           </p>
 
           <div className="flex flex-row justify-start mt-8 space-x-4">
@@ -104,7 +142,9 @@ const AboutSection = () => {
             </TabButton>
           </div>
 
-          <div className="mt-8">{TAB_DATA.find((t) => t.id === tab).content}</div>
+          <div className="mt-8">
+            {TAB_DATA.find((t) => t.id === tab).content}
+          </div>
         </div>
       </div>
     </section>

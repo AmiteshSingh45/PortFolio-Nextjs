@@ -41,6 +41,15 @@ const projectsData = [
     gitUrl: "https://github.com/AmiteshSingh45/colors-detection",
     previewUrl: "http://youtube.com/watch?v=AUOujnUSj4w&feature=youtu.be",
   },
+  {
+  id: 5,
+  title: "Autism Spectrum Disorder (ASD) Prediction System",
+  description: "A machine learning–powered web platform for ASD screening and awareness. The project involves preprocessing ASD data using encoding, handling outliers, and analyzing class imbalance. Applied SMOTE for balancing and trained multiple models including Decision Tree, Random Forest, and XGBoost with cross-validation. Performed hyperparameter tuning using RandomizedSearchCV and selected the best-performing model achieving 93% accuracy. Integrated the trained ML model with a Next.js web interface for real-time ASD prediction and user interaction.",
+  image: "/images/projects/asdProject.jpg",
+  tag: ["All", "Web", "AI/ML"],
+  gitUrl: "https://github.com/AmiteshSingh45/Autism-frontend",
+  previewUrl: "https://autism-mu.vercel.app/",
+}
 ]
 
 const ProjectsSection = () => {
