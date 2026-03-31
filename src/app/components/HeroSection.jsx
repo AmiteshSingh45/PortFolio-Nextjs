@@ -29,8 +29,8 @@ const HeroSection = () => {
           </h1>
 
           <p className="text-[#A0AEC0] text-base sm:text-lg mb-6 lg:text-xl">
-            I&apos;m a passionate full stack developer specializing in building modern, scalable web applications using technologies like Next.js, Node.js, and MongoDB. I love crafting seamless user experiences and solving real-world problems with clean, efficient code.
-          </p>
+  I&apos;m a passionate full stack developer specializing in building modern, scalable web applications using technologies like Next.js, Node.js, and MongoDB. I also have a strong interest in Artificial Intelligence, Machine Learning, and Data Science, where I work on building predictive models, analyzing data, and extracting meaningful insights. I enjoy combining intelligent systems with web technologies to create impactful, real-world solutions with clean and efficient code.
+</p>
 
           <div>
             <Link

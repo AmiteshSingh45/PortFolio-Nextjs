@@ -49,6 +49,15 @@ const projectsData = [
   tag: ["All", "Web", "AI/ML"],
   gitUrl: "https://github.com/AmiteshSingh45/Autism-frontend",
   previewUrl: "https://autism-mu.vercel.app/",
+},
+{
+  id: 6,
+  title: "Student Performance Prediction System",
+  description: "An end-to-end machine learning pipeline designed to predict student academic performance based on demographic and behavioral features. The project includes data ingestion from MySQL, data preprocessing, feature engineering, and exploratory data analysis (EDA). Multiple regression models such as Linear Regression, Decision Tree, Random Forest, Gradient Boosting, XGBoost, and CatBoost were trained and evaluated using metrics like RMSE, MAE, and R² score. The best-performing model was selected and saved for inference. The system follows a modular architecture with separate pipelines for training and prediction, making it scalable and production-ready. Future integration includes deployment with a Next.js frontend for real-time predictions.",
+  image: "/images/projects/studentPerformance.jpg",
+  tag: ["All", "AI/ML"],
+  gitUrl: "https://github.com/AmiteshSingh45/DSPROJ-SETUP",
+  previewUrl: "https://scorepredictor-sigma.vercel.app/",
 }
 ]
 
@@ -71,47 +80,50 @@ const ProjectsSection = () => {
   };
 
   return (
-    <section id="projects">
-      <h2 className="text-center text-4xl font-bold text-white mt-4 mb-8 md:mb-12">
-        My Projects
-      </h2>
-      <div className="text-white flex flex-row justify-center items-center gap-2 py-6">
-        <ProjectTag
-          onClick={handleTagChange}
-          name="All"
-          isSelected={tag === "All"}
-        />
-        <ProjectTag
-          onClick={handleTagChange}
-          name="Web"
-          isSelected={tag === "Web"}
-        />
-        <ProjectTag
-          onClick={handleTagChange}
-          name="Mobile"
-          isSelected={tag === "Mobile"}
-        />
+    <section id="projects" className="py-16">
+      <div className="container mx-auto px-4">
+        <h2 className="text-center text-4xl font-bold text-white mt-4 mb-8 md:mb-12">
+          My Projects
+        </h2>
+        <div className="text-white flex flex-row justify-center items-center gap-4 py-6 mb-8">
+          <ProjectTag
+            onClick={handleTagChange}
+            name="All"
+            isSelected={tag === "All"}
+          />
+          <ProjectTag
+            onClick={handleTagChange}
+            name="Web"
+            isSelected={tag === "Web"}
+          />
+          <ProjectTag
+            onClick={handleTagChange}
+            name="Mobile"
+            isSelected={tag === "Mobile"}
+          />
+        </div>
+        <ul ref={ref} className="grid md:grid-cols-3 gap-8 md:gap-12">
+          {filteredProjects.map((project, index) => (
+            <motion.li
+              key={index}
+              variants={cardVariants}
+              initial="initial"
+              animate={isInView ? "animate" : "initial"}
+              transition={{ duration: 0.3, delay: index * 0.4 }}
+            >
+              <ProjectCard
+                key={project.id}
+                title={project.title}
+                description={project.description}
+                imgUrl={project.image}
+                gitUrl={project.gitUrl}
+                previewUrl={project.previewUrl}
+                techStack={project.tag.filter(tag => tag !== "All")}
+              />
+            </motion.li>
+          ))}
+        </ul>
       </div>
-      <ul ref={ref} className="grid md:grid-cols-3 gap-8 md:gap-12">
-        {filteredProjects.map((project, index) => (
-          <motion.li
-            key={index}
-            variants={cardVariants}
-            initial="initial"
-            animate={isInView ? "animate" : "initial"}
-            transition={{ duration: 0.3, delay: index * 0.4 }}
-          >
-            <ProjectCard
-              key={project.id}
-              title={project.title}
-              description={project.description}
-              imgUrl={project.image}
-              gitUrl={project.gitUrl}
-              previewUrl={project.previewUrl}
-            />
-          </motion.li>
-        ))}
-      </ul>
     </section>
   );
 };

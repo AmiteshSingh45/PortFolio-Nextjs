@@ -2,31 +2,61 @@ import React from "react";
 import { CodeBracketIcon, EyeIcon } from "@heroicons/react/24/outline";
 import Link from "next/link";
 
-const ProjectCard = ({ imgUrl, title, description, gitUrl, previewUrl }) => {
+const ProjectCard = ({ imgUrl, title, description, gitUrl, previewUrl, techStack = [] }) => {
   return (
-    <div>
-      <div
-        className="h-52 md:h-72 rounded-t-xl relative group"
-        style={{ background: `url(${imgUrl})`, backgroundSize: "cover" }}
-      >
-        <div className="overlay items-center justify-center absolute top-0 left-0 w-full h-full bg-[#181818] bg-opacity-0 hidden group-hover:flex group-hover:bg-opacity-80 transition-all duration-500 ">
+    <div className="group relative bg-gradient-to-br from-black via-zinc-900 to-purple-900/20 backdrop-blur-md border border-white/10 rounded-2xl p-6 shadow-lg hover:shadow-2xl hover:shadow-blue-500/20 transition-all duration-500 hover:scale-105 hover:-translate-y-2 overflow-hidden min-h-[500px] flex flex-col">
+      {/* Image Section */}
+      <div className="relative mb-4 overflow-hidden rounded-2xl">
+        <div className="aspect-video bg-gradient-to-br from-gray-800 to-gray-900">
+          <img
+            src={imgUrl}
+            alt={title}
+            className="w-full h-full object-cover rounded-2xl transition-transform duration-500 group-hover:scale-105"
+          />
+          <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent rounded-2xl"></div>
+        </div>
+      </div>
+
+      {/* Content */}
+      <div className="space-y-4 flex-grow">
+        <h3 className="text-xl font-bold text-white tracking-tight leading-tight">
+          {title}
+        </h3>
+        <p className="text-gray-400 text-sm leading-relaxed line-clamp-3">
+          {description}
+        </p>
+
+        {/* Tech Stack Badges */}
+        {techStack.length > 0 && (
+          <div className="flex flex-wrap gap-2">
+            {techStack.map((tech, index) => (
+              <span
+                key={index}
+                className="px-3 py-1 text-xs font-medium bg-gradient-to-r from-blue-500/20 to-purple-600/20 text-blue-300 rounded-full border border-blue-500/30 backdrop-blur-sm"
+              >
+                {tech}
+              </span>
+            ))}
+          </div>
+        )}
+
+        {/* Action Buttons */}
+        <div className="flex gap-3 pt-2">
           <Link
             href={gitUrl}
-            className="h-14 w-14 mr-2 border-2 relative rounded-full border-[#ADB7BE] hover:border-white group/link"
+            className="flex-1 flex items-center justify-center gap-2 px-4 py-2 bg-white/10 hover:bg-white/20 text-white rounded-lg border border-white/20 backdrop-blur-sm transition-all duration-300 hover:shadow-lg hover:shadow-blue-500/25 group/btn"
           >
-            <CodeBracketIcon className="h-10 w-10 text-[#ADB7BE] absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2  cursor-pointer group-hover/link:text-white" />
+            <CodeBracketIcon className="h-4 w-4 group-hover/btn:text-blue-400 transition-colors" />
+            <span className="text-sm font-medium">Code</span>
           </Link>
           <Link
             href={previewUrl}
-            className="h-14 w-14 border-2 relative rounded-full border-[#ADB7BE] hover:border-white group/link"
+            className="flex-1 flex items-center justify-center gap-2 px-4 py-2 bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 text-white rounded-lg transition-all duration-300 hover:shadow-lg hover:shadow-purple-500/25 group/btn"
           >
-            <EyeIcon className="h-10 w-10 text-[#ADB7BE] absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2  cursor-pointer group-hover/link:text-white" />
+            <EyeIcon className="h-4 w-4 group-hover/btn:scale-110 transition-transform" />
+            <span className="text-sm font-medium">Live Demo</span>
           </Link>
         </div>
-      </div>
-      <div className="text-white rounded-b-xl mt-3 bg-[#181818]py-6 px-4">
-        <h5 className="text-xl font-semibold mb-2">{title}</h5>
-        <p className="text-[#ADB7BE]">{description}</p>
       </div>
     </div>
   );
