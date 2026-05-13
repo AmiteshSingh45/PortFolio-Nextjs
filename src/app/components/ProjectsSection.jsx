@@ -24,7 +24,26 @@ const projectsData = [
     previewUrl: "https://cupcakery.vercel.app/",
   },
   {
-    id: 3,
+id: 3,
+title: "BlackSpot Detection Pipeline",
+description: "A production-grade full-stack machine learning platform designed to identify and visualize high-risk highway accident zones using geospatial analytics and adaptive ML algorithms. The system processes accident datasets through a scalable 5-stage pipeline including ingestion, preprocessing, segmentation, detection, and database persistence. It utilizes DBSCAN spatial clustering, percentile-based thresholds, and MinMaxScaler risk scoring to generate 6-tier accident risk classifications. Built with FastAPI microservices and a responsive Next.js dashboard featuring interactive Leaflet maps, real-time KPI analytics, and Recharts visualizations. The platform supports XLSX, CSV, JSON uploads and provides 15+ RESTful APIs for analytics, alerts, and recommendations.",
+image: "/images/projects/blackspotDetection.jpg",
+tag: ["All", "AI/ML", "Full Stack"],
+gitUrl: "https://github.com/AmiteshSingh45/BlackSpot-Detection",
+previewUrl: "https://black-spot-detection.vercel.app/"
+}
+,
+{
+  id: 4,
+  title: "Student Performance Prediction System",
+  description: "An end-to-end machine learning pipeline designed to predict student academic performance based on demographic and behavioral features. The project includes data ingestion from MySQL, data preprocessing, feature engineering, and exploratory data analysis (EDA). Multiple regression models such as Linear Regression, Decision Tree, Random Forest, Gradient Boosting, XGBoost, and CatBoost were trained and evaluated using metrics like RMSE, MAE, and R² score. The best-performing model was selected and saved for inference. The system follows a modular architecture with separate pipelines for training and prediction, making it scalable and production-ready. Future integration includes deployment with a Next.js frontend for real-time predictions.",
+  image: "/images/projects/studentPerformance.jpg",
+  tag: ["All", "AI/ML"],
+  gitUrl: "https://github.com/AmiteshSingh45/DSPROJ-SETUP",
+  previewUrl: "https://scorepredictor-sigma.vercel.app/",
+},
+  {
+    id: 5,
     title: "E-commerce Application - PowerPlayMart",
     description: "PowerPlay Mart is a full-featured e-commerce application for sports equipment, built using the MERN stack (MongoDB, Express, React, Node.js). It includes user authentication, product management, secure checkout, order tracking, and an intuitive UI for a smooth online shopping experience.",
     image: "/images/projects/3.png",
@@ -33,7 +52,7 @@ const projectsData = [
     previewUrl: "/"
   },
   {
-    id: 4,
+    id: 6,
     title: "Color Detection Robot",
     description: "This project is a Color Detection Robot that uses an IP camera for image capture, removes the background using AI, detects the dominant color (Red, Yellow, or Blue), and sends a signal to an Arduino Uno to perform robotic actions like sorting..",
     image: "/images/projects/colorDetectionRobo.jpg",
@@ -42,7 +61,7 @@ const projectsData = [
     previewUrl: "http://youtube.com/watch?v=AUOujnUSj4w&feature=youtu.be",
   },
   {
-  id: 5,
+  id: 7,
   title: "Autism Spectrum Disorder (ASD) Prediction System",
   description: "A machine learning–powered web platform for ASD screening and awareness. The project involves preprocessing ASD data using encoding, handling outliers, and analyzing class imbalance. Applied SMOTE for balancing and trained multiple models including Decision Tree, Random Forest, and XGBoost with cross-validation. Performed hyperparameter tuning using RandomizedSearchCV and selected the best-performing model achieving 93% accuracy. Integrated the trained ML model with a Next.js web interface for real-time ASD prediction and user interaction.",
   image: "/images/projects/asdProject.jpg",
@@ -50,15 +69,7 @@ const projectsData = [
   gitUrl: "https://github.com/AmiteshSingh45/Autism-frontend",
   previewUrl: "https://autism-mu.vercel.app/",
 },
-{
-  id: 6,
-  title: "Student Performance Prediction System",
-  description: "An end-to-end machine learning pipeline designed to predict student academic performance based on demographic and behavioral features. The project includes data ingestion from MySQL, data preprocessing, feature engineering, and exploratory data analysis (EDA). Multiple regression models such as Linear Regression, Decision Tree, Random Forest, Gradient Boosting, XGBoost, and CatBoost were trained and evaluated using metrics like RMSE, MAE, and R² score. The best-performing model was selected and saved for inference. The system follows a modular architecture with separate pipelines for training and prediction, making it scalable and production-ready. Future integration includes deployment with a Next.js frontend for real-time predictions.",
-  image: "/images/projects/studentPerformance.jpg",
-  tag: ["All", "AI/ML"],
-  gitUrl: "https://github.com/AmiteshSingh45/DSPROJ-SETUP",
-  previewUrl: "https://scorepredictor-sigma.vercel.app/",
-}
+
 ]
 
 const ProjectsSection = () => {
